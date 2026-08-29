@@ -1,0 +1,3 @@
+dataset,pool,features,classes,train,val,test,noise_labels
+fmnist,60000,512,10,36000,12000,12000,synthetic only
+cifar10,50000,512,10,30000,10000,10000,synthetic + CIFAR-10N human

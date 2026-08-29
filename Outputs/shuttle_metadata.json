@@ -1,0 +1,81 @@
+{
+  "dataset_key": "shuttle",
+  "source_info": {
+    "source": "UCI ML Repository",
+    "resolved_title": "Statlog (Shuttle)",
+    "uci_id": 148,
+    "doi": null,
+    "fetch_method": "ucimlrepo({'id': 148})"
+  },
+  "n_train": 30000,
+  "n_val": 10000,
+  "n_test": 10000,
+  "n_features": 7,
+  "n_classes": 4,
+  "class_names": {
+    "0": "1",
+    "1": "3",
+    "2": "4",
+    "3": "5"
+  },
+  "class_names_official": null,
+  "preprocessing_rules": {
+    "R1_rows_dropped_nonfinite": 0,
+    "R2_min_class_size": 100,
+    "R2_removed_classes": [
+      "2",
+      "7",
+      "6"
+    ],
+    "R3_size_cap_applied": true,
+    "R4_split": "60/20/20 stratified",
+    "R5_scaling": "StandardScaler fit on train split only"
+  },
+  "pairflip": {
+    "mode": "confusion",
+    "pairs_named": [
+      [
+        "1",
+        "3"
+      ],
+      [
+        "4",
+        "5"
+      ]
+    ],
+    "transition_map": {
+      "0": 1,
+      "1": 0,
+      "2": 3,
+      "3": 2
+    },
+    "justification": "Class labels are opaque operational states; the two most-confused class pairs of a clean-data random forest define the map. Derivation stored in metadata.",
+    "confusion_matrix_if_derived": [
+      [
+        0,
+        30,
+        0,
+        1
+      ],
+      [
+        30,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  "random_seed": 42
+}

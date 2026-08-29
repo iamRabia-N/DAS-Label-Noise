@@ -1,0 +1,7 @@
+dataset,source,doi,rows,features,classes,imbalance,pairflip_mode
+drybean,UCI ML Repository,,13611,16,7,6.8,semantic
+pendigits,UCI ML Repository,,10992,16,10,1.1,semantic
+shuttle,UCI ML Repository,,50000,7,4,266.6,confusion
+satimage,UCI ML Repository,,6435,36,6,2.4,semantic
+har,OpenML,,10299,561,6,1.4,semantic
+isolet,UCI ML Repository,,7797,617,26,1.0,semantic

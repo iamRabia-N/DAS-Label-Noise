@@ -1,0 +1,10 @@
+dataset,noise_type,n,mean_das_delta,wilcoxon_p
+cifar10,symmetric,20,0.0002,0.5217
+cifar10,asymmetric,20,0.0033,0.0004
+cifar10,pairflip,5,-0.0049,0.0625
+cifar10,c10n_aggre,5,0.0017,0.0625
+cifar10,c10n_random1,5,0.0012,0.125
+cifar10,c10n_worse,5,0.0048,0.0625
+fmnist,symmetric,20,0.0003,0.3683
+fmnist,asymmetric,20,0.0027,0.0001
+fmnist,pairflip,5,-0.0045,0.0625

@@ -1,0 +1,61 @@
+{
+  "dataset_key": "satimage",
+  "source_info": {
+    "source": "UCI ML Repository",
+    "resolved_title": "Statlog (Landsat Satellite)",
+    "uci_id": 146,
+    "doi": null,
+    "fetch_method": "ucimlrepo({'id': 146})"
+  },
+  "n_train": 3861,
+  "n_val": 1287,
+  "n_test": 1287,
+  "n_features": 36,
+  "n_classes": 6,
+  "class_names": {
+    "0": "1",
+    "1": "2",
+    "2": "3",
+    "3": "4",
+    "4": "5",
+    "5": "7"
+  },
+  "class_names_official": {
+    "1": "red soil",
+    "2": "cotton crop",
+    "3": "grey soil",
+    "4": "damp grey soil",
+    "5": "vegetation stubble",
+    "7": "very damp grey soil"
+  },
+  "preprocessing_rules": {
+    "R1_rows_dropped_nonfinite": 0,
+    "R2_min_class_size": 100,
+    "R2_removed_classes": [],
+    "R3_size_cap_applied": false,
+    "R4_split": "60/20/20 stratified",
+    "R5_scaling": "StandardScaler fit on train split only"
+  },
+  "pairflip": {
+    "mode": "semantic",
+    "pairs_named": [
+      [
+        "grey soil",
+        "damp grey soil"
+      ],
+      [
+        "cotton crop",
+        "vegetation stubble"
+      ]
+    ],
+    "transition_map": {
+      "2": 3,
+      "3": 2,
+      "1": 4,
+      "4": 1
+    },
+    "justification": "Grey soil vs damp grey soil differ only in moisture; cotton crop and vegetation stubble are both sparse-vegetation covers. Codes per official Statlog documentation.",
+    "confusion_matrix_if_derived": null
+  },
+  "random_seed": 42
+}

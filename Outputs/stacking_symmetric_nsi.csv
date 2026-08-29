@@ -1,0 +1,2 @@
+model,noise_type,f1_clean,f1_at_40pct_noise,total_drop,nsi_slope,relative_drop_pct
+Stacking_Image,symmetric,0.9352360312458934,0.9140996466071598,0.021136384638733574,-0.056881936441206246,2.260005381804668

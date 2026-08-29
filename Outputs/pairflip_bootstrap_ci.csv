@@ -1,0 +1,9 @@
+domain,ensemble,rel_drop_pct,ci_low,ci_high
+Image,RF,5.9,4.91,6.85
+Image,Stacking,4.95,4.16,5.7
+Image,Voting,10.17,9.5,10.84
+Image,XGBoost,13.02,12.7,13.29
+Tabular,RF,19.48,19.22,19.89
+Tabular,Stacking,9.01,7.87,9.93
+Tabular,Voting,19.53,19.34,19.79
+Tabular,XGBoost,19.94,19.72,20.2

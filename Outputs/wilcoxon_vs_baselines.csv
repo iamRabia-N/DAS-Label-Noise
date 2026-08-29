@@ -1,0 +1,19 @@
+noise_type,comparison,n,mean_delta,wilcoxon_p
+symmetric,DAS vs CL_XGB,160,-0.0078,0.235725
+symmetric,DAS vs GCE_XGB,160,0.0037,0.0
+symmetric,DAS vs XGB,160,-0.0014,1e-06
+symmetric,PlainStack vs CL_XGB,160,-0.0101,0.439252
+symmetric,PlainStack vs GCE_XGB,160,0.0014,0.0
+symmetric,DAS vs PlainStack,160,0.0022,0.007828
+asymmetric,DAS vs CL_XGB,160,-0.0225,0.0
+asymmetric,DAS vs GCE_XGB,160,0.0255,0.0
+asymmetric,DAS vs XGB,160,0.0283,0.0
+asymmetric,PlainStack vs CL_XGB,160,-0.0229,0.0
+asymmetric,PlainStack vs GCE_XGB,160,0.0251,0.0
+asymmetric,DAS vs PlainStack,160,0.0005,0.289295
+pairflip,DAS vs CL_XGB,40,-0.0293,1e-05
+pairflip,DAS vs GCE_XGB,40,0.0182,0.002639
+pairflip,DAS vs XGB,40,0.0254,2.3e-05
+pairflip,PlainStack vs CL_XGB,40,-0.0284,1e-06
+pairflip,PlainStack vs GCE_XGB,40,0.0191,0.006955
+pairflip,DAS vs PlainStack,40,-0.0009,0.354092

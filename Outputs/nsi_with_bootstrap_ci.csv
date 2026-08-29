@@ -1,0 +1,17 @@
+ensemble,domain,noise_type,nsi_slope,nsi_ci_low,nsi_ci_high,rel_drop_pct,rel_drop_ci_low,rel_drop_ci_high,f1_clean,f1_at_40
+RF,Image,asymmetric,-0.2177,-0.2475,-0.194,10.95,9.86,12.3,0.9024,0.8035
+Stacking,Image,asymmetric,-0.3852,-0.3967,-0.3658,16.96,15.95,17.66,0.9352,0.7766
+Voting,Image,asymmetric,-0.3713,-0.3958,-0.3465,17.62,16.28,18.99,0.9334,0.7689
+XGBoost,Image,asymmetric,-0.4934,-0.5185,-0.4668,22.93,21.75,24.14,0.9349,0.7205
+RF,Image,symmetric,-0.0153,-0.0249,-0.0076,0.77,0.55,1.14,0.9024,0.8954
+Stacking,Image,symmetric,-0.0569,-0.0637,-0.0497,2.26,1.98,2.55,0.9352,0.9141
+Voting,Image,symmetric,-0.0361,-0.043,-0.0292,1.52,1.33,1.72,0.9334,0.9192
+XGBoost,Image,symmetric,-0.0622,-0.0715,-0.0529,2.72,2.45,3.06,0.9349,0.9094
+RF,Tabular,asymmetric,-0.8151,-0.8242,-0.8059,35.42,35.0,35.77,0.9107,0.5881
+Stacking,Tabular,asymmetric,-0.4925,-0.5121,-0.4729,23.2,22.03,24.3,0.8895,0.6831
+Voting,Tabular,asymmetric,-0.824,-0.8308,-0.815,35.22,34.84,35.57,0.933,0.6043
+XGBoost,Tabular,asymmetric,-0.8125,-0.8204,-0.8015,35.09,34.57,35.51,0.9362,0.6077
+RF,Tabular,symmetric,-0.5126,-0.5168,-0.5084,22.39,22.17,22.56,0.9107,0.7068
+Stacking,Tabular,symmetric,-0.4993,-0.5226,-0.4726,23.82,22.48,25.02,0.8895,0.6776
+Voting,Tabular,symmetric,-0.4224,-0.4261,-0.4185,18.44,18.38,18.49,0.933,0.761
+XGBoost,Tabular,symmetric,-0.3114,-0.3171,-0.3046,13.79,13.65,13.92,0.9362,0.8071

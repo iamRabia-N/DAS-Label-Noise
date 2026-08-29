@@ -1,0 +1,55 @@
+{
+  "dataset_key": "fmnist",
+  "source_info": {
+    "source": "Fashion-MNIST (Zalando Research)",
+    "reference": "Xiao et al., arXiv:1708.07747",
+    "license": "MIT",
+    "fetch_method": "torchvision.datasets.FashionMNIST"
+  },
+  "feature_extractor": "ResNet18 IMAGENET1K_V1, fc removed, frozen (identical to Notebook 04a)",
+  "feature_dim": 512,
+  "pool_definition": "official train partition, split 60/20/20 stratified, seed 42 (CIFAR-10N labels exist only for the train partition)",
+  "n_train": 36000,
+  "n_val": 12000,
+  "n_test": 12000,
+  "n_classes": 10,
+  "class_names": {
+    "0": "T-shirt/top",
+    "1": "Trouser",
+    "2": "Pullover",
+    "3": "Dress",
+    "4": "Coat",
+    "5": "Sandal",
+    "6": "Shirt",
+    "7": "Sneaker",
+    "8": "Bag",
+    "9": "Ankle boot"
+  },
+  "pairflip": {
+    "mode": "semantic",
+    "pairs_named": [
+      [
+        "T-shirt/top",
+        "Shirt"
+      ],
+      [
+        "Pullover",
+        "Coat"
+      ],
+      [
+        "Sandal",
+        "Sneaker"
+      ]
+    ],
+    "transition_map": {
+      "0": 6,
+      "6": 0,
+      "2": 4,
+      "4": 2,
+      "5": 7,
+      "7": 5
+    },
+    "justification": "T-shirt/top vs Shirt, Pullover vs Coat, and Sandal vs Sneaker are the canonical visually confusable Fashion-MNIST pairs."
+  },
+  "random_seed": 42
+}
