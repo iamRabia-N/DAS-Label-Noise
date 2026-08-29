@@ -1,0 +1,9 @@
+domain,ensemble,f1_clean_mean,f1_cyclic_mean,rel_drop_cyclic_pct,f1_pairflip_mean,rel_drop_pairflip_pct
+Image,RF,0.9024,0.8035,10.955,0.8491,5.9036
+Image,Stacking,0.9352,0.7766,16.9632,0.889,4.9488
+Image,Voting,0.9334,0.7689,17.6176,0.8385,10.1704
+Image,XGBoost,0.9349,0.7205,22.9339,0.8132,13.0167
+Tabular,RF,0.9107,0.5881,35.423,0.7333,19.476
+Tabular,Stacking,0.8895,0.6831,23.2041,0.8093,9.0081
+Tabular,Voting,0.933,0.6043,35.2248,0.7508,19.5332
+Tabular,XGBoost,0.9362,0.6077,35.092,0.7495,19.9411

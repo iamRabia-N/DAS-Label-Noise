@@ -1,0 +1,7 @@
+model,noise_type,slope_ci_low,slope_ci_high
+RF_100k,asymmetric,-0.7972,-0.7598
+RF_100k,symmetric,-0.5257,-0.5014
+Voting_100k,asymmetric,-0.8489,-0.8053
+Voting_100k,symmetric,-0.5604,-0.528
+XGBoost_100k,asymmetric,-0.9055,-0.8639
+XGBoost_100k,symmetric,-0.5579,-0.5269

@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "dataset": "drybean",
+    "tuning_sample_size": 8166,
+    "n_classes": 7,
+    "cv_folds": 3,
+    "scoring": "f1_macro",
+    "random_seed": 42,
+    "gpu_used_for_xgb": true,
+    "noise_level_for_tuning": 0.0,
+    "source": "recovered from 13a/13b run logs of 2026-08-13 (sessions hit 12h limit; all values below were fully computed and printed before the cut)"
+  },
+  "random_forest": {
+    "best_params": {
+      "max_depth": null,
+      "max_features": "sqrt",
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "n_estimators": 300
+    },
+    "best_cv_score": 0.932529,
+    "tuning_time_minutes": 5.3
+  },
+  "xgboost": {
+    "best_params": {
+      "colsample_bytree": 1.0,
+      "learning_rate": 0.05,
+      "max_depth": 10,
+      "n_estimators": 200,
+      "subsample": 0.8
+    },
+    "best_cv_score": 0.939621,
+    "tuning_time_minutes": 15.7,
+    "base_params": {
+      "random_state": 42,
+      "tree_method": "hist",
+      "eval_metric": "mlogloss",
+      "n_jobs": -1,
+      "verbosity": 0,
+      "device": "cuda"
+    }
+  },
+  "extra_trees": {
+    "params": {
+      "n_estimators": 300,
+      "max_depth": null,
+      "min_samples_split": 5,
+      "min_samples_leaf": 2,
+      "max_features": "sqrt",
+      "n_jobs": -1,
+      "random_state": 42,
+      "class_weight": "balanced_subsample"
+    },
+    "derived_from": "random_forest_best_params + sqrt features"
+  },
+  "stacking": {
+    "base_learners": [
+      "rf",
+      "xgb",
+      "et"
+    ],
+    "meta_learner_params": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "multi_class": "multinomial",
+      "solver": "lbfgs",
+      "random_state": 42
+    },
+    "cv_folds_internal": 5,
+    "cv_f1_macro_mean": 0.9369,
+    "cv_f1_macro_std": 0.0006,
+    "validation_time_minutes": 2.6
+  },
+  "voting": {
+    "base_learners": [
+      "rf",
+      "xgb",
+      "et"
+    ],
+    "voting_type": "soft",
+    "weights": null,
+    "cv_f1_macro_mean": 0.9354,
+    "cv_f1_macro_std": 0.0007,
+    "validation_time_minutes": 0.5
+  }
+}

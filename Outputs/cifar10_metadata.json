@@ -1,0 +1,59 @@
+{
+  "dataset_key": "cifar10",
+  "source_info": {
+    "source": "CIFAR-10 (Krizhevsky 2009)",
+    "reference": "Krizhevsky, Learning Multiple Layers of Features from Tiny Images, 2009",
+    "fetch_method": "torchvision.datasets.CIFAR10"
+  },
+  "feature_extractor": "ResNet18 IMAGENET1K_V1, fc removed, frozen (identical to Notebook 04a)",
+  "feature_dim": 512,
+  "pool_definition": "official train partition, split 60/20/20 stratified, seed 42 (CIFAR-10N labels exist only for the train partition)",
+  "n_train": 30000,
+  "n_val": 10000,
+  "n_test": 10000,
+  "n_classes": 10,
+  "class_names": {
+    "0": "airplane",
+    "1": "automobile",
+    "2": "bird",
+    "3": "cat",
+    "4": "deer",
+    "5": "dog",
+    "6": "frog",
+    "7": "horse",
+    "8": "ship",
+    "9": "truck"
+  },
+  "pairflip": {
+    "mode": "semantic",
+    "pairs_named": [
+      [
+        "cat",
+        "dog"
+      ],
+      [
+        "automobile",
+        "truck"
+      ],
+      [
+        "deer",
+        "horse"
+      ]
+    ],
+    "transition_map": {
+      "3": 5,
+      "5": 3,
+      "1": 9,
+      "9": 1,
+      "4": 7,
+      "7": 4
+    },
+    "justification": "cat vs dog, automobile vs truck, and deer vs horse are canonical visually/semantically confusable CIFAR-10 pairs."
+  },
+  "random_seed": 42,
+  "cifar10n_realized_train_noise_pct": {
+    "aggre_label": 8.93,
+    "random_label1": 17.2,
+    "worse_label": 40.19
+  }
+}

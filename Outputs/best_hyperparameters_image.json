@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "dataset": "EuroSAT (ResNet18 features)",
+    "feature_dim": 512,
+    "train_size": 16200,
+    "cv_folds": 3,
+    "scoring": "f1_macro",
+    "random_seed": 42,
+    "gpu_used_for_xgb": true,
+    "noise_level_for_tuning": 0.0
+  },
+  "random_forest": {
+    "best_params": {
+      "max_depth": 25,
+      "max_features": "sqrt",
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "n_estimators": 300
+    },
+    "best_cv_score": 0.9010672741148679,
+    "tuning_time_minutes": 45.357830719153085
+  },
+  "xgboost": {
+    "best_params": {
+      "colsample_bytree": 0.8,
+      "learning_rate": 0.1,
+      "max_depth": 6,
+      "n_estimators": 600,
+      "subsample": 0.8
+    },
+    "best_cv_score": 0.9331876993449818,
+    "tuning_time_minutes": 143.95423165957132,
+    "base_params": {
+      "random_state": 42,
+      "tree_method": "hist",
+      "eval_metric": "mlogloss",
+      "n_jobs": -1,
+      "verbosity": 0,
+      "device": "cuda"
+    }
+  },
+  "extra_trees": {
+    "params": {
+      "n_estimators": 300,
+      "max_depth": 25,
+      "min_samples_split": 5,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt",
+      "n_jobs": -1,
+      "random_state": 42,
+      "class_weight": "balanced_subsample"
+    },
+    "derived_from": "random_forest_best_params + sqrt features"
+  },
+  "stacking": {
+    "base_learners": [
+      "rf",
+      "xgb",
+      "et"
+    ],
+    "meta_learner_params": {
+      "C": 1.0,
+      "max_iter": 1000,
+      "multi_class": "multinomial",
+      "solver": "lbfgs",
+      "random_state": 42
+    },
+    "cv_folds_internal": 5,
+    "cv_f1_macro_mean": 0.93317748881065,
+    "cv_f1_macro_std": 0.0026944102206107215,
+    "validation_time_minutes": 19.42609712680181
+  },
+  "voting": {
+    "base_learners": [
+      "rf",
+      "xgb",
+      "et"
+    ],
+    "voting_type": "soft",
+    "weights": null,
+    "cv_f1_macro_mean": 0.9314662574646757,
+    "cv_f1_macro_std": 0.003380131080438415,
+    "validation_time_minutes": 3.7825350125630695
+  }
+}

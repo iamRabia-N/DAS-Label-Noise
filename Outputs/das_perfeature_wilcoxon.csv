@@ -1,0 +1,13 @@
+group,arm,n,mean_delta,wilcoxon_p
+symmetric,AllFour,20,0.0044,0.6742
+symmetric,Confidence,20,0.0049,0.8124
+symmetric,Disagreement,20,0.0036,0.5217
+asymmetric,AllFour,20,0.0028,0.0192
+asymmetric,Confidence,20,0.0017,0.1231
+asymmetric,Disagreement,20,0.0004,0.9854
+pairflip,AllFour,5,0.006,0.0625
+pairflip,Confidence,5,0.0053,0.0625
+pairflip,Disagreement,5,0.0029,0.0625
+symmetric_40_only,AllFour,5,0.0254,0.0625
+symmetric_40_only,Confidence,5,0.0268,0.0625
+symmetric_40_only,Disagreement,5,0.0161,0.0625

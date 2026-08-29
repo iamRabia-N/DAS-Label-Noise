@@ -1,0 +1,7 @@
+model,noise_type,f1_clean,f1_at_40,nsi_slope,rel_drop_pct
+RF_100k,asymmetric,0.8523,0.5428,-0.7785,36.31
+RF_100k,symmetric,0.8523,0.6491,-0.5125,23.84
+Voting_100k,asymmetric,0.8861,0.555,-0.8288,37.37
+Voting_100k,symmetric,0.8861,0.6668,-0.5418,24.75
+XGBoost_100k,asymmetric,0.8875,0.5337,-0.888,39.86
+XGBoost_100k,symmetric,0.8875,0.6674,-0.5413,24.8

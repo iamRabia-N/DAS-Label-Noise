@@ -1,0 +1,9 @@
+ensemble,noise_type,tab_rel_drop,img_rel_drop,ratio
+RF,symmetric,22.39,0.77,29.08
+RF,asymmetric,35.42,10.95,3.23
+XGBoost,symmetric,13.79,2.72,5.07
+XGBoost,asymmetric,35.09,22.93,1.53
+Voting,symmetric,18.44,1.52,12.13
+Voting,asymmetric,35.22,17.62,2.0
+Stacking,symmetric,23.82,2.26,10.54
+Stacking,asymmetric,23.2,16.96,1.37

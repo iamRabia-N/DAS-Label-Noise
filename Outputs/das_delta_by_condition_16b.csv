@@ -1,0 +1,8 @@
+domain,noise_type,noise_level,mean,std
+Image,asymmetric,0.0,-0.0004,0.0014
+Image,asymmetric,0.2,0.004,0.0022
+Image,asymmetric,0.4,0.001,0.004
+Image,pairflip,0.4,-0.008,0.0052
+Image,symmetric,0.0,-0.0004,0.0014
+Image,symmetric,0.2,-0.0009,0.0021
+Image,symmetric,0.4,0.0001,0.0011

@@ -1,0 +1,4 @@
+domain,noise_type,mean_delta,n,wilcoxon_p
+Image,asymmetric,0.0025,10,0.0488
+Image,pairflip,-0.008,5,0.0625
+Image,symmetric,-0.0004,10,0.8457

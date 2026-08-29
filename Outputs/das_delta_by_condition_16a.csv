@@ -1,0 +1,12 @@
+domain,noise_type,noise_level,mean,std
+Tabular,asymmetric,0.0,0.0011,0.0034
+Tabular,asymmetric,0.1,0.0007,0.0047
+Tabular,asymmetric,0.2,0.0029,0.004
+Tabular,asymmetric,0.3,0.0029,0.0048
+Tabular,asymmetric,0.4,0.003,0.006
+Tabular,pairflip,0.4,0.006,0.002
+Tabular,symmetric,0.0,0.0012,0.0035
+Tabular,symmetric,0.1,-0.0026,0.001
+Tabular,symmetric,0.2,-0.0018,0.0024
+Tabular,symmetric,0.3,-0.0034,0.0018
+Tabular,symmetric,0.4,0.0255,0.0133

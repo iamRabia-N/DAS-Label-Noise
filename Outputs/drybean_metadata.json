@@ -1,0 +1,55 @@
+{
+  "dataset_key": "drybean",
+  "source_info": {
+    "source": "UCI ML Repository",
+    "resolved_title": "Dry Bean",
+    "uci_id": 602,
+    "doi": null,
+    "fetch_method": "ucimlrepo({'id': 602})"
+  },
+  "n_train": 8166,
+  "n_val": 2722,
+  "n_test": 2723,
+  "n_features": 16,
+  "n_classes": 7,
+  "class_names": {
+    "0": "BARBUNYA",
+    "1": "BOMBAY",
+    "2": "CALI",
+    "3": "DERMASON",
+    "4": "HOROZ",
+    "5": "SEKER",
+    "6": "SIRA"
+  },
+  "class_names_official": null,
+  "preprocessing_rules": {
+    "R1_rows_dropped_nonfinite": 0,
+    "R2_min_class_size": 100,
+    "R2_removed_classes": [],
+    "R3_size_cap_applied": false,
+    "R4_split": "60/20/20 stratified",
+    "R5_scaling": "StandardScaler fit on train split only"
+  },
+  "pairflip": {
+    "mode": "semantic",
+    "pairs_named": [
+      [
+        "DERMASON",
+        "SIRA"
+      ],
+      [
+        "CALI",
+        "BARBUNYA"
+      ]
+    ],
+    "transition_map": {
+      "3": 6,
+      "6": 3,
+      "2": 0,
+      "0": 2
+    },
+    "justification": "Dermason and Sira are small, morphologically similar varieties; Cali and Barbunya share size and shape profiles (Koklu & Ozkan 2020).",
+    "confusion_matrix_if_derived": null
+  },
+  "random_seed": 42
+}

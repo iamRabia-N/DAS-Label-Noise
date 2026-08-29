@@ -1,0 +1,4 @@
+domain,noise_type,mean_delta,n,wilcoxon_p
+Tabular,asymmetric,0.0024,20,0.0362
+Tabular,pairflip,0.006,5,0.0625
+Tabular,symmetric,0.0044,20,0.6742

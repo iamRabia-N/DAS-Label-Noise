@@ -1,0 +1,107 @@
+{
+  "dataset_key": "isolet",
+  "source_info": {
+    "source": "UCI ML Repository",
+    "resolved_title": "ISOLET",
+    "uci_id": 54,
+    "doi": null,
+    "fetch_method": "ucimlrepo({'id': 54})"
+  },
+  "n_train": 4677,
+  "n_val": 1560,
+  "n_test": 1560,
+  "n_features": 617,
+  "n_classes": 26,
+  "class_names": {
+    "0": "1",
+    "1": "10",
+    "2": "11",
+    "3": "12",
+    "4": "13",
+    "5": "14",
+    "6": "15",
+    "7": "16",
+    "8": "17",
+    "9": "18",
+    "10": "19",
+    "11": "2",
+    "12": "20",
+    "13": "21",
+    "14": "22",
+    "15": "23",
+    "16": "24",
+    "17": "25",
+    "18": "26",
+    "19": "3",
+    "20": "4",
+    "21": "5",
+    "22": "6",
+    "23": "7",
+    "24": "8",
+    "25": "9"
+  },
+  "class_names_official": {
+    "1": "A",
+    "2": "B",
+    "3": "C",
+    "4": "D",
+    "5": "E",
+    "6": "F",
+    "7": "G",
+    "8": "H",
+    "9": "I",
+    "10": "J",
+    "11": "K",
+    "12": "L",
+    "13": "M",
+    "14": "N",
+    "15": "O",
+    "16": "P",
+    "17": "Q",
+    "18": "R",
+    "19": "S",
+    "20": "T",
+    "21": "U",
+    "22": "V",
+    "23": "W",
+    "24": "X",
+    "25": "Y",
+    "26": "Z"
+  },
+  "preprocessing_rules": {
+    "R1_rows_dropped_nonfinite": 0,
+    "R2_min_class_size": 100,
+    "R2_removed_classes": [],
+    "R3_size_cap_applied": false,
+    "R4_split": "60/20/20 stratified",
+    "R5_scaling": "StandardScaler fit on train split only"
+  },
+  "pairflip": {
+    "mode": "semantic",
+    "pairs_named": [
+      [
+        "B",
+        "D"
+      ],
+      [
+        "P",
+        "T"
+      ],
+      [
+        "M",
+        "N"
+      ]
+    ],
+    "transition_map": {
+      "11": 20,
+      "20": 11,
+      "7": 12,
+      "12": 7,
+      "4": 5,
+      "5": 4
+    },
+    "justification": "Classic acoustically confusable spoken-letter pairs (E-set and nasal consonants). Codes 1-26 map to letters A-Z per official ISOLET docs.",
+    "confusion_matrix_if_derived": null
+  },
+  "random_seed": 42
+}
